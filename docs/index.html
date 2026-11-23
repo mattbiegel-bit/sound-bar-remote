@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ece7db">
+<title>Soundbar Remote · Bestisan S6520C</title>
+<link rel="stylesheet" href="remote.css">
+<script src="remote.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="mast">
+    <div class="brand">BESTISAN<span> / S6520C</span></div>
+    <button id="setup" class="outline">Setup</button>
+  </header>
+  <h1>Soundbar<br><em>Remote.</em></h1>
+  <section class="deck" aria-label="Soundbar controls">
+    <div class="face">
+      <div class="screen">
+        <div class="screen-top"><span><i></i> <span id="mode">CONNECTING</span></span><span>IR CONTROL</span></div>
+        <output id="display" aria-live="polite">READY</output>
+        <div id="meter" aria-hidden="true"></div>
+      </div>
+      <div class="row main-buttons">
+        <button class="power" data-key="power"><span aria-hidden="true">⏻</span> Power</button>
+        <button data-key="mute">Mute</button>
+      </div>
+      <div class="volume" role="group" aria-label="Volume">
+        <button data-key="volume_down" aria-label="Volume down">−</button>
+        <span>VOLUME</span>
+        <button data-key="volume_up" aria-label="Volume up">+</button>
+      </div>
+    </div>
+    <div class="lower">
+      <h2>Input</h2>
+      <div class="row inputs">
+        <button data-key="bluetooth">Bluetooth</button><button data-key="optical">Optical</button>
+        <button data-key="aux">AUX</button><button data-key="rca">RCA</button><button data-key="usb">USB</button>
+      </div>
+      <h2>Sound mode</h2>
+      <div class="row"><button data-key="movie">Movie</button><button data-key="dialog">Dialog</button><button data-key="music">Music</button></div>
+      <details>
+        <summary>Tone &amp; playback</summary>
+        <div class="row extras">
+          <button data-key="bass_down">Bass −</button><button data-key="bass_up">Bass +</button>
+          <button data-key="treble_down">Treble −</button><button data-key="treble_up">Treble +</button>
+          <button data-key="previous">Previous</button><button data-key="next">Next</button>
+        </div>
+      </details>
+    </div>
+  </section>
+  <p id="notice" role="status"></p>
+</main>
+<dialog id="help">
+  <form method="dialog"><button class="outline close" aria-label="Close setup">Close</button></form>
+  <h2>Remote setup</h2>
+  <p>Connect a Broadlink RM Mini or RM Pro IR blaster to your Wi-Fi using its app. Place it within sight of the soundbar.</p>
+  <p>On a computer on the same network, run the included Python bridge and teach it each button with a compatible physical remote. See the project README for the setup commands.</p>
+  <p>Open the address printed by the bridge to send real commands. This preview simulates the remote.</p>
+</dialog>
+</body>
+</html>
